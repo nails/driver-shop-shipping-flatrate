@@ -1,0 +1,20 @@
+{
+	"name" : "Flat Rate Shipping Driver",
+	"description" : "This is the Flat Rate shipping driver for Nails Shop Module.",
+	"keywords": ["Nails"],
+	"homepage": "http://nailsapp.co.uk/shop/shipping/driver/flatrate",
+	"license" :"MIT",
+	"version" : "0.1.0",
+	"authors" : [
+		{
+			"name": "Pablo de la Pena",
+			"email": "p@shedcollective.org",
+			"homepage": "http://shedcollective.org",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "hello@shedcollective.org"
+	},
+	"configurable": true
+}
