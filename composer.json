@@ -1,10 +1,14 @@
 {
 	"name": "nailsapp/shop-shipping-driver-flatrate",
-	"keywords": ["Nails"],
+	"keywords":
+	[
+		"Nails"
+	],
 	"homepage": "http://nailsapp.co.uk/shop/shipping/driver/flatrate",
 	"description": "The flatrate shipping driver for Nails shop",
-	"license":"MIT",
-	"authors": [
+	"license": "MIT",
+	"authors":
+	[
 		{
 			"name": "Pablo de la Pena",
 			"email": "p@shedcollective.org",
@@ -12,8 +16,11 @@
 			"role": "Developer"
 		}
 	],
-	"support": {
+	"support":
+	{
 		"email": "hello@shedcollective.org"
 	},
-	"require":{}
+	"require":
+	{
+	}
 }
