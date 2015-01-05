@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Shop_shipping_driver_flatrate
+class Shop_shipping_driver_flatrate implements Shop_shipping_driver
 {
 	/**
 	 * Calculates the cost of shipping  all shippable items in a basket
@@ -8,9 +8,9 @@ class Shop_shipping_driver_flatrate
 	 * @param  stdClass $basket          The complete basket object, used to grab the basket's total value.
 	 * @return float
 	 */
-	public function calculate( $shippable_items, $basket )
+	public function calculate($shippableItems, $basket)
 	{
-		//	TODO:
+		// @TODO: Support this
 		return 0;
 	}
 
@@ -23,9 +23,9 @@ class Shop_shipping_driver_flatrate
 	 * These might include priority shipping or recorded delivery for example.
 	 * @return array
 	 */
-	public function options_basket()
+	public function optionsBasket()
 	{
-		//	TODO: Support this in the basket
+		// @TODO: Support this in the basket
 		return array();
 	}
 
@@ -37,8 +37,9 @@ class Shop_shipping_driver_flatrate
 	 * Returns an array of additional options for variants which can be set by admin
 	 * @return array
 	 */
-	public function options_variant()
+	public function optionsVariant()
 	{
+		// @TODO: Support this
 		return array();
 	}
 
@@ -50,9 +51,9 @@ class Shop_shipping_driver_flatrate
 	 * Returns an array of additional options for products which can be set by admin
 	 * @return array
 	 */
-	public function options_product()
+	public function optionsProduct()
 	{
-		//	TODO: Support this in admin
+		// @TODO: Support this in admin
 		return array();
 	}
 
@@ -66,20 +67,16 @@ class Shop_shipping_driver_flatrate
 	 */
 	public function configure()
 	{
-		//	TODO: Support this in admin
-		$_ci =& get_instance();
+		// @TODO: Support this in admin
+		$ci =& get_instance();
 
-		if ( $_ci->input->post() ) :
+		if ($ci->input->post()) {
 
 			return 'PROCESSED';
-
-		endif;
+		}
 
 		// --------------------------------------------------------------------------
 
 		return 'TODO: Render a settings page';
 	}
 }
-
-/* End of file driver.php */
-/* Location: ./shop-shipping-driver-basic/driver.php */
