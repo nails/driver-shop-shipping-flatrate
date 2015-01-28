@@ -1,26 +1,34 @@
 {
-	"name": "nailsapp/shop-shipping-driver-flatrate",
-	"keywords":
-	[
-		"Nails"
-	],
-	"homepage": "http://nailsapp.co.uk/shop/shipping/driver/flatrate",
-	"description": "The flatrate shipping driver for Nails shop",
-	"license": "MIT",
-	"authors":
-	[
-		{
-			"name": "Pablo de la Pena",
-			"email": "p@shedcollective.org",
-			"homepage": "http://shedcollective.org",
-			"role": "Developer"
-		}
-	],
-	"support":
-	{
-		"email": "hello@shedcollective.org"
-	},
-	"require":
-	{
-	}
+    "name": "nailsapp/shop-shipping-driver-flatrate",
+    "keywords":
+    [
+        "Nails"
+    ],
+    "homepage": "http://nailsapp.co.uk/shop/shipping/driver/flatrate",
+    "description": "The flatrate shipping driver for Nails shop",
+    "license": "MIT",
+    "authors":
+    [
+        {
+            "name": "Pablo de la Pena",
+            "email": "p@shedcollective.org",
+            "homepage": "http://shedcollective.org",
+            "role": "Developer"
+        }
+    ],
+    "support":
+    {
+        "email": "hello@shedcollective.org"
+    },
+    "require":
+    {
+    },
+    "extra":
+    {
+        "nails" :
+        {
+            "type": "driver",
+            "subtype": "shop-shipping"
+        }
+    }
 }
