@@ -28,7 +28,7 @@
         "nails" :
         {
             "type": "driver",
-            "subtype": "shop-shipping"
+            "subType": "shop-shipping"
         }
     }
 }
