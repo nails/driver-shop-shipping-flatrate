@@ -1,9 +1,6 @@
 {
     "name": "nailsapp/shop-shipping-driver-flatrate",
-    "keywords":
-    [
-        "Nails"
-    ],
+    "keywords": ["Nails", "Shop Module", "Shipping Driver"],
     "homepage": "http://nailsapp.co.uk/shop/shipping/driver/flatrate",
     "description": "The flatrate shipping driver for Nails shop",
     "license": "MIT",
