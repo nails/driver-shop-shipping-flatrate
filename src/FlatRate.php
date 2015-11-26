@@ -1,6 +1,10 @@
 <?php
 
-class Shop_shipping_driver_flatrate implements Shop_shipping_driver
+namespace Nails\Shop\Driver;
+
+use Nails\Shop\Interfaces\ShippingDriver;
+
+class FlatRate implements ShippingDriver
 {
     /**
      * Calculates the cost of shipping  all shippable items in a basket

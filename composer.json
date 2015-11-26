@@ -1,5 +1,5 @@
 {
-    "name": "nailsapp/shop-shipping-driver-flatrate",
+    "name": "nailsapp/driver-shop-shipping-flatrate",
     "keywords": ["Nails", "Shop Module", "Shipping Driver"],
     "homepage": "http://nailsapp.co.uk/shop/shipping/driver/flatrate",
     "description": "The flatrate shipping driver for Nails shop",
@@ -26,7 +26,11 @@
         {
             "type": "driver",
             "forModule": "nailsapp/module-shop",
-            "subType": "shipping"
+            "subType": "shipping",
+            "data": {
+                "namespace": "Nails\\Shop\\Driver\\",
+                "class": "FlatRate"
+            }
         }
     }
 }
