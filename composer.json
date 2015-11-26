@@ -25,7 +25,8 @@
         "nails" :
         {
             "type": "driver",
-            "subType": "shop-shipping"
+            "forModule": "nailsapp/module-shop",
+            "subType": "shipping"
         }
     }
 }

@@ -11,7 +11,7 @@ class Shop_shipping_driver_flatrate implements Shop_shipping_driver
     public function calculate($shippableItems, $basket)
     {
         // @TODO: Support this
-        return 0;
+        return 1000;
     }
 
     // --------------------------------------------------------------------------
@@ -25,7 +25,7 @@ class Shop_shipping_driver_flatrate implements Shop_shipping_driver
      */
     public function calculateVariant($variant, $basket = null)
     {
-        return 0;
+        return 1000;
     }
 
     // --------------------------------------------------------------------------
@@ -35,7 +35,7 @@ class Shop_shipping_driver_flatrate implements Shop_shipping_driver
      * These might include priority shipping or recorded delivery for example.
      * @return array
      */
-    public function optionsBasket()
+    public function fieldsBasket()
     {
         // @TODO: Support this in the basket
         return array();
@@ -47,7 +47,7 @@ class Shop_shipping_driver_flatrate implements Shop_shipping_driver
      * Returns an array of additional options for variants which can be set by admin
      * @return array
      */
-    public function optionsVariant()
+    public function fieldsVariant()
     {
         // @TODO: Support this
         return array();
@@ -59,7 +59,7 @@ class Shop_shipping_driver_flatrate implements Shop_shipping_driver
      * Returns an array of additional options for products which can be set by admin
      * @return array
      */
-    public function optionsProduct()
+    public function fieldsProduct()
     {
         // @TODO: Support this in admin
         return array();
