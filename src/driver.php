@@ -2,9 +2,9 @@
 
 namespace Nails\Shop\Driver;
 
-use Nails\Shop\Interfaces\ShippingDriver;
+use Nails\Shop\Driver\ShippingBase;
 
-class FlatRate implements ShippingDriver
+class FlatRate extends ShippingBase
 {
     /**
      * Calculates the cost of shipping  all shippable items in a basket
