@@ -24,6 +24,7 @@
     {
         "nails" :
         {
+            "name": "Flat Rate",
             "type": "driver",
             "forModule": "nailsapp/module-shop",
             "subType": "shipping",
