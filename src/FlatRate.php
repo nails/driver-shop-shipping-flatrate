@@ -1,0 +1,93 @@
+<?php
+
+namespace Nails\Shop\Driver;
+
+use Nails\Shop\Driver\ShippingBase;
+
+class FlatRate extends ShippingBase
+{
+    private $iCostPerItem = 0;
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Accepts an array of config values from the main driver model
+     * @param array $aConfig The configs to set
+     * @return array
+     */
+    public function setconfig($aConfig)
+    {
+        $this->iCostPerItem = (int) $aConfig['costPerItem'];
+    }
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Returns an array of the available shipping options
+     * @return array
+     */
+    public function options($aShippableItems, $oBasket)
+    {
+        return array(
+            array(
+                'default' => true,
+                'slug' => 'STANDARD',
+                'label' => 'Standard Delivery',
+                'cost' => $this->calculate($aShippableItems, 'STANDARD', $oBasket)
+            )
+        );
+    }
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Calculates the cost of shipping all shippable items in a basket
+     * @param  array    $aShippableItems An array of all items which are shippable (i.e., product type `is_physical` and is not `collect_only`)
+     * @param  stdClass $oBasket         The complete basket object, used to grab the basket's total value.
+     * @return integer
+     */
+    public function calculate($aShippableItems, $oBasket)
+    {
+        $iItemCount = 0;
+        foreach ($aShippableItems as $oItem) {
+            $iItemCount += $oItem->quantity;
+        }
+        return $iItemCount * $this->iCostPerItem;
+    }
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Calculates the cost of shipping an individual variant, in the shop's
+     * base currency.
+     * @param  array    $oVariant The variant being shipped
+     * @param  stdClass $oBasket   The entire basket object
+     * @return integer
+     */
+    public function calculateVariant($oVariant, $oBasket = null)
+    {
+        return $this->iCostPerItem;
+    }
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Returns an array of additional options for variants which can be set by admin
+     * @return array
+     */
+    public function fieldsVariant()
+    {
+        return array();
+    }
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Returns an array of additional options for products which can be set by admin
+     * @return array
+     */
+    public function fieldsProduct()
+    {
+        return array();
+    }
+}

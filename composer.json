@@ -30,7 +30,14 @@
             "subType": "shipping",
             "data": {
                 "namespace": "Nails\\Shop\\Driver\\",
-                "class": "FlatRate"
+                "class": "FlatRate",
+                "settings": [
+                    {
+                        "key": "costPerItem",
+                        "label": "Cost per Item",
+                        "type": "price"
+                    }
+                ]
             }
         }
     }
