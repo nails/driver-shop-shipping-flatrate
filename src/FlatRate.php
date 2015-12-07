@@ -41,6 +41,17 @@ class FlatRate extends ShippingBase
     // --------------------------------------------------------------------------
 
     /**
+     * Returns the slug of the desired default shipping option
+     * @return string
+     */
+    public function defaultOption()
+    {
+        return 'STANDARD';
+    }
+
+    // --------------------------------------------------------------------------
+
+    /**
      * Calculates the cost of shipping all shippable items in a basket
      * @param  array    $aShippableItems An array of all items which are shippable (i.e., product type `is_physical` and is not `collect_only`)
      * @param  stdClass $oBasket         The complete basket object, used to grab the basket's total value.
