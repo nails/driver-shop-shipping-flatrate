@@ -17,6 +17,7 @@ class FlatRate extends ShippingBase
      */
     public function setconfig($aConfig)
     {
+        //  @todo convert this to the base currency's smallest units (i.e £1.23 -> 123p)
         $this->iCostPerItem = (int) $aConfig['costPerItem'];
     }
 

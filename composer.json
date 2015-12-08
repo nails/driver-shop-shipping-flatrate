@@ -35,7 +35,7 @@
                     {
                         "key": "costPerItem",
                         "label": "Cost per Item",
-                        "type": "price"
+                        "type": "number"
                     }
                 ]
             }
