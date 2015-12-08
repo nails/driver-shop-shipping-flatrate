@@ -30,23 +30,11 @@ class FlatRate extends ShippingBase
     {
         return array(
             array(
-                'default' => true,
-                'slug' => 'STANDARD',
-                'label' => 'Standard Delivery',
-                'cost' => $this->calculate($aShippableItems, 'STANDARD', $oBasket)
+                'slug'    => 'STANDARD',
+                'label'   => 'Standard Delivery',
+                'default' => true
             )
         );
-    }
-
-    // --------------------------------------------------------------------------
-
-    /**
-     * Returns the slug of the desired default shipping option
-     * @return string
-     */
-    public function defaultOption()
-    {
-        return 'STANDARD';
     }
 
     // --------------------------------------------------------------------------
