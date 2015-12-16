@@ -29,7 +29,7 @@ class FlatRate extends ShippingBase
      * Returns an array of the available shipping options
      * @return array
      */
-    public function options($aShippableItems, $oBasket)
+    public function options()
     {
         return array(
             array(
