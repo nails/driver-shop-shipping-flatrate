@@ -62,11 +62,11 @@ class FlatRate extends ShippingBase
     /**
      * Calculates the cost of shipping an individual variant, in the shop's
      * base currency.
-     * @param  array    $oVariant The variant being shipped
-     * @param  stdClass $oBasket   The entire basket object
+     * @param  array    $oVariant    The variant being shipped
+     * @param  string   $sOptionSlug The desired shipping option
      * @return integer
      */
-    public function calculateVariant($oVariant, $oBasket = null)
+    public function calculateVariant($oVariant, $sOptionSlug)
     {
         return $this->iCostPerItem;
     }
