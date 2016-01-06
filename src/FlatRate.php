@@ -1,6 +1,6 @@
 <?php
 
-namespace Nails\Shop\Driver;
+namespace Nails\Shop\Driver\Shipping;
 
 use Nails\Shop\Driver\ShippingBase;
 

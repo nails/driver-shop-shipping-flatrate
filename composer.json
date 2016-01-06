@@ -29,7 +29,7 @@
             "forModule": "nailsapp/module-shop",
             "subType": "shipping",
             "data": {
-                "namespace": "Nails\\Shop\\Driver\\",
+                "namespace": "Nails\\Shop\\Driver\\Shipping\\",
                 "class": "FlatRate",
                 "settings": [
                     {
