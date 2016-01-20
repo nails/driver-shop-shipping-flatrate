@@ -6,25 +6,6 @@ use Nails\Shop\Driver\ShippingBase;
 
 class FlatRate extends ShippingBase
 {
-    private $iCostPerItem = 0;
-
-    // --------------------------------------------------------------------------
-
-    /**
-     * Accepts an array of config values from the main driver model
-     * @param array $aConfig The configs to set
-     * @return array
-     */
-    public function setconfig($aConfig)
-    {
-        parent::setConfig($aConfig);
-
-        //  @todo convert this to the base currency's smallest units (i.e £1.23 -> 123p)
-        $this->iCostPerItem = (int) $aConfig['costPerItem'];
-    }
-
-    // --------------------------------------------------------------------------
-
     /**
      * Returns an array of the available shipping options
      * @return array
@@ -50,11 +31,12 @@ class FlatRate extends ShippingBase
      */
     public function calculate($aShippableItems, $oBasket)
     {
-        $iItemCount = 0;
+        $iCostPerItem = (int) $this->getSetting('iCostPerItem') ?: 0;
+        $iItemCount   = 0;
         foreach ($aShippableItems as $oItem) {
             $iItemCount += $oItem->quantity;
         }
-        return $iItemCount * $this->iCostPerItem;
+        return $iItemCount * $iCostPerItem;
     }
 
     // --------------------------------------------------------------------------
@@ -68,6 +50,7 @@ class FlatRate extends ShippingBase
      */
     public function calculateVariant($oVariant, $sOptionSlug)
     {
+        $iCostPerItem = (int) $this->getSetting('iCostPerItem') ?: 0;
         return $this->iCostPerItem;
     }
 

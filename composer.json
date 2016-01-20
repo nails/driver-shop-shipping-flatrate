@@ -33,7 +33,7 @@
                 "class": "FlatRate",
                 "settings": [
                     {
-                        "key": "costPerItem",
+                        "key": "iCostPerItem",
                         "label": "Cost per Item",
                         "type": "number"
                     }
